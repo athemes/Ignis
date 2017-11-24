@@ -1631,7 +1631,7 @@ img {
 }	
 
 @media only screen and (max-width: 400px) {
-	..tax-jetpack-portfolio-type .hentry,
+	.tax-jetpack-portfolio-type .hentry,
 	.post-type-archive-jetpack-portfolio .hentry,
 	.page-template-template_portfolio .hentry {
 		width: 100%;
