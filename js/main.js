@@ -75,13 +75,16 @@ wow.init();
 (function($) {
     var checkMenuReverse = function() {
         if( window.matchMedia("only screen and (min-width: 1199px)").matches ) {
-            $('.main-navigation .menu > li').on('mouseover', function(e){
+            
+            // .off('mouseover') to avoid multiple events on resize event
+            $('.main-navigation .menu > li').off('mouseover').on('mouseover', function(e){
                 $( e.currentTarget ).find('.sub-menu').each(function(){
                     if( isInViewport( $(this)[0] ) == false ) {
                         $(this).addClass('sub-menu-reverse');	
                     }
                 });
             });
+
         } else {
             $('.main-navigation .sub-menu').each(function(){
                 $(this).removeClass('sub-menu-reverse');
