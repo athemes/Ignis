@@ -74,7 +74,7 @@ wow.init();
 */
 (function($) {
     var checkMenuReverse = function() {
-        if( window.matchMedia("only screen and (max-width: 1199px)") ) {
+        if( window.matchMedia("only screen and (min-width: 1199px)").matches ) {
             $('.main-navigation .menu > li').on('mouseover', function(e){
                 $( e.currentTarget ).find('.sub-menu').each(function(){
                     if( isInViewport( $(this)[0] ) == false ) {
